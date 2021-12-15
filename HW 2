@@ -1,0 +1,16 @@
+#Coin flip experiment: Use random.uniform() to generate output [Heads, Tail] of a coin flip experiment.
+#a) Estimate the probability of heads in a fair coin flip by generating a lot of instances of experiment.
+#b) Estimate the probability of heads in a biased coin flip with a bias of 0.8, and find the number of heads and tails in a random experiment.
+#c) Plot/Display estimate as a function of number of experiments (n) and argue how do youdecide how many times you need to repeat the experiment to get a good estimate.
+#(a)
+
+from random import randint
+count = 0
+N = 10000
+for i in range (N):
+    flips = randint (0,1)
+    if (flips == 1):
+        count = count + 1
+prob= count/N
+print (count)
+print ("Probability of getting heads from a random flip on coin experiement is", prob)
